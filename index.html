@@ -2,30 +2,33 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mi Proyecto Web</title>
 
     <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Bienvenido a mi Página Web</h1>
+    <main class="tarjeta">
+      <h1>Bienvenido a mi Página Web</h1>
+      <p class="subtitulo">Este proyecto fue publicado usando GitHub.</p>
 
-    <p>Este proyecto fue publicado usando GitHub.</p>
+      <label for="nombre">Ingrese su nombre</label>
+      <div class="fila">
+        <input type="text" id="nombre" placeholder="Escribe tu nombre" />
+        <button onclick="saludar()">Saludar</button>
+      </div>
+      <p id="resultado" class="mensaje" aria-live="polite"></p>
 
-    <p>Ingrese su nombre:</p>
+      <h2>Formulario de contacto</h2>
 
-    <input type="text" id="nombre" placeholder="Escribe tu nombre" />
-
-    <button onclick="saludar()">Saludar</button>
-
-    <p id="resultado"></p>
-
-    <h2>Formulario de contacto</h2>
-
-    <input type="email" id="correo" placeholder="Ingrese su correo">
-    <button onclick="validarCorreo()">Validar correo</button>
-
-    <p id="mensajeCorreo"></p>
+      <label for="correo">Correo electrónico</label>
+      <div class="fila">
+        <input type="email" id="correo" placeholder="Ingrese su correo" />
+        <button onclick="validarCorreo()">Validar correo</button>
+      </div>
+      <p id="mensajeCorreo" class="mensaje" aria-live="polite"></p>
+    </main>
 
     <!-- Enlace al archivo JavaScript -->
     <script src="script.js"></script>

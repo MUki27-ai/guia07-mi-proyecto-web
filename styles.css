@@ -1,27 +1,100 @@
+/* Paleta del sistema */
+:root {
+  --fondo: #e7eef0;
+  --tarjeta: #ffffff;
+  --texto: #1c2a30;
+  --texto-suave: #5a6b72;
+  --borde: #cfdade;
+  --acento: #1f6f5c;
+  --acento-oscuro: #165244;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f8ff;
-  text-align: center;
-  margin-top: 50px;
+  margin: 0;
+  min-height: 100vh;
+  padding: 48px 16px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+}
+
+.tarjeta {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 32px;
+  background-color: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
 }
 
 h1 {
-  color: #2c3e50;
+  margin: 0 0 4px;
+  font-size: 1.75rem;
+}
+
+h2 {
+  margin: 32px 0 0;
+  padding-top: 24px;
+  font-size: 1.2rem;
+  border-top: 1px solid var(--borde);
+}
+
+.subtitulo {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+label {
+  display: block;
+  margin: 20px 0 6px;
+  font-weight: 600;
+}
+
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 input {
-  padding: 8px;
-  margin: 10px;
+  flex: 1 1 200px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #b6c5ca;
+  border-radius: 8px;
+}
+
+input:focus {
+  outline: 2px solid var(--acento);
+  outline-offset: 1px;
+  border-color: var(--acento);
 }
 
 button {
-  padding: 8px 15px;
-  background-color: #3498db;
+  padding: 10px 16px;
+  font-size: 1rem;
+  background-color: var(--acento);
   color: white;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: var(--acento-oscuro);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--texto);
+  outline-offset: 2px;
+}
+
+.mensaje {
+  min-height: 1.5em;
+  margin: 10px 0 0;
+  font-weight: 600;
 }
