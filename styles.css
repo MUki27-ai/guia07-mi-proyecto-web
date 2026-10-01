@@ -98,3 +98,21 @@ button:focus-visible {
   margin: 10px 0 0;
   font-weight: 600;
 }
+
+/* Mensajes dinámicos */
+.mensaje.ok {
+  color: var(--acento);
+}
+
+.mensaje.error {
+  color: #b3261e;
+}
+
+input.invalido {
+  border-color: #b3261e;
+  background-color: #fdf3f2;
+}
+
+input.invalido:focus {
+  outline-color: #b3261e;
+}
